@@ -1,4 +1,6 @@
 from AlchemyAPI.alchemyapi import AlchemyAPI
+#from AlchemyAPI.alchemyapi import alchemyapi
+#from AlchemyAPI.alchemyapi import *
 from AmazonParser import *
 from Reviews import *
 from Responses import *
