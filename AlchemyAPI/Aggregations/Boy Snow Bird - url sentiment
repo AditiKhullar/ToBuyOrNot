@@ -1,0 +1,460 @@
+('Processing url: ', 'http://www.amazon.com/Boy-Snow-Bird-A-Novel/product-reviews/1594631395/')
+
+
+
+############################################
+#   Keyword Extraction Example             #
+############################################
+
+
+
+## Response Object ##
+{
+    "status": "OK", 
+    "totalTransactions": "2", 
+    "language": "english", 
+    "url": "http://www.amazon.com/Boy-Snow-Bird-A-Novel/product-reviews/1594631395/", 
+    "entities": [
+        {
+            "count": "16", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.0235647", 
+                "type": "negative"
+            }, 
+            "disambiguated": {
+                "yago": "http://yago-knowledge.org/resource/Helen_Oyeyemi", 
+                "freebase": "http://rdf.freebase.com/ns/m.05vjs6", 
+                "dbpedia": "http://dbpedia.org/resource/Helen_Oyeyemi", 
+                "name": "Helen Oyeyemi"
+            }, 
+            "text": "Helen Oyeyemi", 
+            "relevance": "0.748575", 
+            "type": "Person"
+        }, 
+        {
+            "relevance": "0.739605", 
+            "count": "25", 
+            "type": "Person", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "0.0278119", 
+                "type": "positive"
+            }, 
+            "text": "Bird"
+        }, 
+        {
+            "relevance": "0.72159", 
+            "count": "19", 
+            "type": "Person", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.0107814", 
+                "type": "negative"
+            }, 
+            "text": "Boy Novak"
+        }, 
+        {
+            "relevance": "0.591116", 
+            "count": "11", 
+            "type": "Person", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "text": "Snow"
+        }, 
+        {
+            "relevance": "0.44315", 
+            "count": "11", 
+            "type": "Person", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "text": "Arturo Whitman"
+        }, 
+        {
+            "relevance": "0.303894", 
+            "count": "6", 
+            "type": "Person", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "0.13597", 
+                "type": "positive"
+            }, 
+            "text": "Helen Oyeymi"
+        }, 
+        {
+            "relevance": "0.278912", 
+            "count": "2", 
+            "type": "GeographicFeature", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "0.344188", 
+                "type": "positive"
+            }, 
+            "text": "Flax Hill"
+        }, 
+        {
+            "relevance": "0.255237", 
+            "count": "1", 
+            "type": "Person", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "text": "Steve"
+        }, 
+        {
+            "count": "1", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.423196", 
+                "type": "negative"
+            }, 
+            "disambiguated": {
+                "subType": [], 
+                "dbpedia": "http://dbpedia.org/resource/New_York,_Tyne_and_Wear", 
+                "name": "New York, Tyne and Wear", 
+                "freebase": "http://rdf.freebase.com/ns/m.02h39h"
+            }, 
+            "text": "New York", 
+            "relevance": "0.25206", 
+            "type": "City"
+        }, 
+        {
+            "count": "1", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.108096", 
+                "type": "negative"
+            }, 
+            "disambiguated": {
+                "website": "http://www.mass.gov", 
+                "yago": "http://yago-knowledge.org/resource/Massachusetts", 
+                "name": "Massachusetts", 
+                "freebase": "http://rdf.freebase.com/ns/m.05k7sb", 
+                "opencyc": "http://sw.opencyc.org/concept/Mx4rvVi4QpwpEbGdrcN5Y29ycA", 
+                "subType": [
+                    "Location", 
+                    "PoliticalDistrict", 
+                    "AdministrativeDivision", 
+                    "GovernmentalJurisdiction", 
+                    "USState"
+                ], 
+                "dbpedia": "http://dbpedia.org/resource/Massachusetts"
+            }, 
+            "text": "Massachusetts", 
+            "relevance": "0.249715", 
+            "type": "StateOrCounty"
+        }, 
+        {
+            "relevance": "0.247938", 
+            "count": "2", 
+            "type": "City", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.138904", 
+                "type": "negative"
+            }, 
+            "text": "Flax Hills"
+        }, 
+        {
+            "count": "1", 
+            "sentiment": {
+                "score": "0.0103016", 
+                "type": "positive"
+            }, 
+            "disambiguated": {
+                "website": "http://www.beck.com/", 
+                "name": "Beck", 
+                "freebase": "http://rdf.freebase.com/ns/m.0137g1", 
+                "subType": [
+                    "Composer", 
+                    "MusicalArtist", 
+                    "AwardNominee", 
+                    "AwardWinner", 
+                    "BroadcastArtist", 
+                    "Celebrity", 
+                    "FilmMusicContributor", 
+                    "Guitarist", 
+                    "Lyricist", 
+                    "MusicalGroupMember", 
+                    "RecordingEngineer", 
+                    "RecordProducer", 
+                    "Songwriter", 
+                    "TVActor"
+                ], 
+                "dbpedia": "http://dbpedia.org/resource/Beck", 
+                "musicBrainz": "http://zitgist.com/music/artist/309c62ba-7a22-4277-9f67-4a162526d18a"
+            }, 
+            "text": "beck", 
+            "relevance": "0.241602", 
+            "type": "Person"
+        }, 
+        {
+            "count": "1", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "disambiguated": {
+                "website": "http://www.nyc.gov/", 
+                "yago": "http://yago-knowledge.org/resource/New_York_City", 
+                "name": "New York City", 
+                "freebase": "http://rdf.freebase.com/ns/m.02_286", 
+                "subType": [
+                    "PoliticalDistrict", 
+                    "GovernmentalJurisdiction", 
+                    "PlaceWithNeighborhoods", 
+                    "WineRegion", 
+                    "FilmScreeningVenue"
+                ], 
+                "dbpedia": "http://dbpedia.org/resource/New_York_City", 
+                "geo": "40.71666666666667 -74.0", 
+                "geonames": "http://sws.geonames.org/5128581/"
+            }, 
+            "text": "New York City", 
+            "relevance": "0.241188", 
+            "type": "City"
+        }, 
+        {
+            "relevance": "0.227709", 
+            "count": "1", 
+            "type": "Person", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "text": "Helen"
+        }, 
+        {
+            "relevance": "0.224033", 
+            "count": "1", 
+            "type": "City", 
+            "sentiment": {
+                "score": "-0.312859", 
+                "type": "negative"
+            }, 
+            "text": "New England"
+        }, 
+        {
+            "relevance": "0.220738", 
+            "count": "1", 
+            "type": "Person", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.373239", 
+                "type": "negative"
+            }, 
+            "text": "Boy"
+        }, 
+        {
+            "count": "1", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.140629", 
+                "type": "negative"
+            }, 
+            "disambiguated": {
+                "yago": "http://yago-knowledge.org/resource/New_England", 
+                "name": "New England", 
+                "freebase": "http://rdf.freebase.com/ns/m.029jpy", 
+                "subType": [
+                    "Location"
+                ], 
+                "dbpedia": "http://dbpedia.org/resource/New_England", 
+                "geo": "44.205555555555556 -70.306425"
+            }, 
+            "text": "New England", 
+            "relevance": "0.220274", 
+            "type": "Region"
+        }, 
+        {
+            "relevance": "0.212467", 
+            "count": "1", 
+            "type": "Person", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "0.547731", 
+                "type": "positive"
+            }, 
+            "text": "Mr. Fox"
+        }, 
+        {
+            "relevance": "0.199407", 
+            "count": "1", 
+            "type": "Continent", 
+            "sentiment": {
+                "score": "0.160164", 
+                "type": "positive"
+            }, 
+            "text": "America"
+        }, 
+        {
+            "relevance": "0.186249", 
+            "count": "2", 
+            "type": "Person", 
+            "sentiment": {
+                "type": "neutral"
+            }, 
+            "text": "Whitmans"
+        }, 
+        {
+            "relevance": "0.179145", 
+            "count": "1", 
+            "type": "StateOrCounty", 
+            "sentiment": {
+                "mixed": "1", 
+                "score": "-0.186416", 
+                "type": "negative"
+            }, 
+            "text": "MA"
+        }
+    ], 
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html"
+}
+
+## Entities ##
+('text: ', 'Helen Oyeyemi')
+('type: ', u'Person')
+('relevance: ', u'0.748575')
+('sentiment: ', u'negative')
+sentiment score: -0.0235647
+
+('text: ', 'Bird')
+('type: ', u'Person')
+('relevance: ', u'0.739605')
+('sentiment: ', u'positive')
+sentiment score: 0.0278119
+
+('text: ', 'Boy Novak')
+('type: ', u'Person')
+('relevance: ', u'0.72159')
+('sentiment: ', u'negative')
+sentiment score: -0.0107814
+
+('text: ', 'Snow')
+('type: ', u'Person')
+('relevance: ', u'0.591116')
+('sentiment: ', u'neutral')
+
+('text: ', 'Arturo Whitman')
+('type: ', u'Person')
+('relevance: ', u'0.44315')
+('sentiment: ', u'neutral')
+
+('text: ', 'Helen Oyeymi')
+('type: ', u'Person')
+('relevance: ', u'0.303894')
+('sentiment: ', u'positive')
+sentiment score: 0.13597
+
+('text: ', 'Flax Hill')
+('type: ', u'GeographicFeature')
+('relevance: ', u'0.278912')
+('sentiment: ', u'positive')
+sentiment score: 0.344188
+
+('text: ', 'Steve')
+('type: ', u'Person')
+('relevance: ', u'0.255237')
+('sentiment: ', u'neutral')
+
+('text: ', 'New York')
+('type: ', u'City')
+('relevance: ', u'0.25206')
+('sentiment: ', u'negative')
+sentiment score: -0.423196
+
+('text: ', 'Massachusetts')
+('type: ', u'StateOrCounty')
+('relevance: ', u'0.249715')
+('sentiment: ', u'negative')
+sentiment score: -0.108096
+
+('text: ', 'Flax Hills')
+('type: ', u'City')
+('relevance: ', u'0.247938')
+('sentiment: ', u'negative')
+sentiment score: -0.138904
+
+('text: ', 'beck')
+('type: ', u'Person')
+('relevance: ', u'0.241602')
+('sentiment: ', u'positive')
+sentiment score: 0.0103016
+
+('text: ', 'New York City')
+('type: ', u'City')
+('relevance: ', u'0.241188')
+('sentiment: ', u'neutral')
+
+('text: ', 'Helen')
+('type: ', u'Person')
+('relevance: ', u'0.227709')
+('sentiment: ', u'neutral')
+
+('text: ', 'New England')
+('type: ', u'City')
+('relevance: ', u'0.224033')
+('sentiment: ', u'negative')
+sentiment score: -0.312859
+
+('text: ', 'Boy')
+('type: ', u'Person')
+('relevance: ', u'0.220738')
+('sentiment: ', u'negative')
+sentiment score: -0.373239
+
+('text: ', 'New England')
+('type: ', u'Region')
+('relevance: ', u'0.220274')
+('sentiment: ', u'negative')
+sentiment score: -0.140629
+
+('text: ', 'Mr. Fox')
+('type: ', u'Person')
+('relevance: ', u'0.212467')
+('sentiment: ', u'positive')
+sentiment score: 0.547731
+
+('text: ', 'America')
+('type: ', u'Continent')
+('relevance: ', u'0.199407')
+('sentiment: ', u'positive')
+sentiment score: 0.160164
+
+('text: ', 'Whitmans')
+('type: ', u'Person')
+('relevance: ', u'0.186249')
+('sentiment: ', u'neutral')
+
+('text: ', 'MA')
+('type: ', u'StateOrCounty')
+('relevance: ', u'0.179145')
+('sentiment: ', u'negative')
+sentiment score: -0.186416
+
+
+
+
+############################################
+#   Sentiment Analysis Example             #
+############################################
+
+
+
+## Response Object ##
+{
+    "status": "OK", 
+    "usage": "By accessing AlchemyAPI or using information generated by AlchemyAPI, you are agreeing to be bound by the AlchemyAPI Terms of Use: http://www.alchemyapi.com/company/terms.html", 
+    "url": "http://www.amazon.com/Boy-Snow-Bird-A-Novel/product-reviews/1594631395/", 
+    "language": "english", 
+    "docSentiment": {
+        "mixed": "1", 
+        "score": "0.0340796", 
+        "type": "positive"
+    }
+}
+
+## Document Sentiment ##
+('type: ', u'positive')
+('score: ', u'0.0340796')
+[Finished in 4.9s]
