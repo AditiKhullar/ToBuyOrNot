@@ -1,4 +1,5 @@
 #from AlchemyAPI.alchemyapi import AlchemyAPI
+# Checking git
 import sys, os
 sys.path.append(os.path.abspath('../AlchemyAPI'))
 from Reviews import *
