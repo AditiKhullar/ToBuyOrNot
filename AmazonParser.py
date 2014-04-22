@@ -1,9 +1,13 @@
-import re, sys, unicodedata, os, json, RegexParser
+#import re, sys, unicodedata, os, json, RegexParser
+import re, sys, unicodedata, os, json
 from urllib import urlopen
 from Reviews import *
 from Responses import *
 from HTMLParser import HTMLParser
+#sys.path.append(os.path.abspath('../AlchemyAPI'))
 from AlchemyAPI.alchemyapi import AlchemyAPI
+
+#from alchemyapi import AlchemyAPI
 
 class AmazonParser:
 	""" Stores reviews from an Amazon.com product page in a list """

@@ -1,7 +1,11 @@
-from AlchemyAPI.alchemyapi import AlchemyAPI
+#from AlchemyAPI.alchemyapi import AlchemyAPI
+import sys, os
+#sys.path.append(os.path.abspath('../AlchemyAPI'))
 from AmazonParser import *
 from Reviews import *
 from Responses import *
+#import AlchemyAPI
+from AlchemyAPI.alchemyapi import AlchemyAPI
 
 # URL of product's main/ review page
 URL = "http://www.amazon.com/dp/B000Y9YJK4/"
@@ -32,7 +36,7 @@ print('')
 print('')
 print('')
 
-response = alchemyapi.entities('url',url, { 'sentiment':1 })
+response = alchemyapi.entities('url',URL, { 'sentiment':1 })
 
 if response['status'] == 'OK':
 	print('## Response Object ##')

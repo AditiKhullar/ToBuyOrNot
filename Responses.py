@@ -1,4 +1,6 @@
-from AlchemyAPI.alchemyapi import AlchemyAPI
+#from AlchemyAPI.alchemyapi import AlchemyAPI
+import sys, os
+sys.path.append(os.path.abspath('../AlchemyAPI'))
 from Reviews import *
 from List import *
 
