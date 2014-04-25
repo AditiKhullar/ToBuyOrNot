@@ -60,6 +60,8 @@ print average
 
 if average > 0:
 	print "\n\n\nGO FOR IT\n\n\n"
+else:
+	print "\n\n\nDONT BUY IT\n\n\n"
 
 #print " \n *******DONE WITH PROCESSING ALL DOCUMENTS********** \n"
 
