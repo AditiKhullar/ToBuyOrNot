@@ -1,6 +1,3 @@
-#from AlchemyAPI.alchemyapi import AlchemyAPI
-import sys, os
-#sys.path.append(os.path.abspath('../AlchemyAPI'))
 from AmazonParser import *
 from Reviews import *
 from Responses import *
@@ -37,6 +34,8 @@ print('')
 print('')
 
 response = alchemyapi.entities('url',URL, { 'sentiment':1 })
+
+
 
 if response['status'] == 'OK':
 	print('## Response Object ##')
