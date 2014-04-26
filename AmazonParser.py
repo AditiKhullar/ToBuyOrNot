@@ -24,6 +24,7 @@ class AmazonParser:
 		self.setProductInfo(content)
 		self.reviews = Reviews(self.productName)
 
+
 		# If the reviews have been parsed, read them from the disk.
 		# Else parse them from the website and store them on disk.
 		if self.reviewsOnDisk():
@@ -34,8 +35,17 @@ class AmazonParser:
 			self.lastPage = self.currPage = 1
 			while self.lastPage >= self.currPage:
 				self.getReviewsFrom(content)
+				print " \n\n PRINTING CONTENT HERE \n\n"
+				print content
+				print " \n\n END OF PRINT \n\n"
 				content = self.getNextPageFrom(content)
 			self.saveData()
+
+		print "\n\n\nREVIEWS HERE\n\n\n"
+	        print self.reviews
+
+	        print "\n\n ENd \n\n"
+
 
 	def getReviewsFrom(self, content):
 		""" Takes a product review page in array form and returns a list

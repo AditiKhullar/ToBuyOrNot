@@ -5,7 +5,8 @@ from Responses import *
 from AlchemyAPI.alchemyapi import AlchemyAPI
 
 # URL of product's main/ review page
-URL = "http://www.amazon.com/dp/B000Y9YJK4/"
+#URL = "http://www.amazon.com/dp/B000Y9YJK4/"
+URL = "http://www.amazon.com/dp/B000BVZ3BO/"
 
 
 Parser = AmazonParser(URL)
@@ -15,10 +16,61 @@ alchemyapi = AlchemyAPI()
 
 # Group text from all reviews into one text file to process
 text = ''
+singleText = ''
+sentiment = []
+print " \n Processing all documents sentiments iteratively \n "
 for r in Parser.reviews.list:
 	text += r.text
+	singleText = r.text
+	print "\n\n\n@@@@@@@Printing text here@@@@@@@\n\n\n"
+	print r.text
+	print "\n\n\n@@@@@@@END of text@@@@@@@@\n\n\n"
+
+	currentResponse = alchemyapi.sentiment('text', singleText, { 'showSourceText':0 })
+
+	#print "\n\n\nPRINT SENTIMENT ANALYSIS HERE\n\n\n"
+	#print currentResponse
+	#print "\\n\n\nEnd of sentiment analysis\n\n\n"
+
+	if currentResponse['status'] == 'OK':
+		#print('##currentResponse object')
+		#print(json.dumps(currentResponse, indent=4))
+
+		print('')
+		print('### Document sentiment analysis ###')
+
+		print('type: ', currentResponse['docSentiment']['type'])
+	
+        if 'score' in currentResponse['docSentiment']:
+            print('score: ', currentResponse['docSentiment']['score'])
+        else:
+            print('Error in sentiment analysis call: ', currentResponse['statusInfo'])
+
+        sentiment.append(float(currentResponse['docSentiment']['score']))
+
+        print " \n ***DONE WITH CURRENT DOCUMENT. PROCESSING NEXT*** \n"
+
+average = sum(sentiment) / float(len(sentiment))
+print "\n\n\n###RESULT###\n\n\n"
+print "average sentiment: \n"
+print average
+
+if average > 0:
+	print "\n\n\nGO FOR IT\n\n\n"
+else:
+	print "\n\n\nDONT BUY IT\n\n\n"
+
+#print " \n *******DONE WITH PROCESSING ALL DOCUMENTS********** \n"
 
 
+
+
+
+
+"""
+# commented from here to try sentiment analysis 
+# and targeted sentiment analysis on individual reviews
+# - Rajath - 04/25
 # Option 1
 
 print('Processing text: ', text)
@@ -35,7 +87,14 @@ print('')
 
 response = alchemyapi.entities('url',URL, { 'sentiment':1 })
 
+<<<<<<< HEAD
 
+=======
+## debug
+print "\n\n\n PRINTING RESPONSE HERE \n\n\n"
+print response
+print "\nEND OF PRINT\n"
+>>>>>>> FETCH_HEAD
 
 if response['status'] == 'OK':
 	print('## Response Object ##')
@@ -54,7 +113,7 @@ if response['status'] == 'OK':
 		print('')
 else:
 	print('Error in entity extraction call: ', response['statusInfo'])
-
+"""
 
 
 # Option 2
