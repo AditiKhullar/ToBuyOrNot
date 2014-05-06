@@ -25,6 +25,10 @@ for r in Parser.reviews.list:
 	print "\n\n\n@@@@@@@Printing text here@@@@@@@\n\n\n"
 	print r.text
 	print "\n\n\n@@@@@@@END of text@@@@@@@@\n\n\n"
+	print "\n\n\n#######RATINGS HERE#######\n\n\n"
+        currentReviewRating = r.rating
+        print r.rating
+        print "\n\n\n#######ENd of Rating######\n\n\n"
 
 	currentResponse = alchemyapi.sentiment('text', singleText, { 'showSourceText':0 })
 
@@ -46,7 +50,15 @@ for r in Parser.reviews.list:
         else:
             print('Error in sentiment analysis call: ', currentResponse['statusInfo'])
 
-        sentiment.append(float(currentResponse['docSentiment']['score']))
+        if float(currentResponse['docSentiment']['score']) > 0 and float(currentReviewRating) > 2.5:
+            print " \n\&&&&&&&&&&&&&nReview can be trusted : both positive&&&&&&&&&&&\n\n" 
+            sentiment.append(float(currentResponse['docSentiment']['score']))
+        elif float(currentResponse['docSentiment']['score']) < 0 and float(currentReviewRating) < 2.5: 
+            sentiment.append(float(currentResponse['docSentiment']['score']))
+            print " \n\n&&&&&&&&&&&&Review can be trusted : both negative&&&&&&&&&&&&&&&\n\n" 
+        else: 
+            print " \n\&&&&&&&&&&&&nReview cant be trusted&&&&&&&&& \n\n" 
+        
 
         print " \n ***DONE WITH CURRENT DOCUMENT. PROCESSING NEXT*** \n"
 
