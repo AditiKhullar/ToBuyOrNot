@@ -1,0 +1,119 @@
+{
+    "Count": "16",
+    "Last Update": "2014-05-05 19:24:11.889847",
+    "Product Name": "Plantronics HEADSET TO USB ADAPTER ( DA40 )",
+    "Reviews": [
+        {
+            "date": "January 13, 2012",
+            "rating": "5.0",
+            "text": "The microphone portion of the DA40 works great with any H-Series Plantronics headset I have tried.\n\nHowever, I found the audio in the earpiece to be very low volume and rather tinny and distorted.\n\nFooling around with the audio control panel, I found that moving the balance control to the extreme left or right produced very clear audio and brought the volume WAY up.\n\nApparently, what is causing this is that the DA40 is combining left and right audio from the Windows USB driver out-of-phase. This results in partial cancellation of the audio, which is causing the low audio and distortion. The DA40 is outputting the difference between the right and left channels, rather than the sum of the signals.\n\nThere are a few issues with doing the balance control trick to get good audio quality and volume from the DA40. First, if the Windows application is sending stereo data to the USB driver and you move the balance control to extreme left or right, you are excluding the audio from one channel from the mono output of the DA40. The solution in Windows XP is to set the speaker type to \"Mono\" or \"Laptop Mono\". This mixes the left and right channels together in the PC. You still need to move the balance control to the extreme right or left as the DA40 will still mix the channels out of phase and distort the output. By setting the speaker type in the driver to \"Laptop Mono\", you are assuring all the stereo imformation is mixed together on both the left and right channels. Confusing, yes?\n\nOn Windows 7/Vista, there is no good solution as these operating systems do not allow setting the speaker type to \"Mono\". You can still do the balance setting trick, but if the application you are using (Windows Media Player, for example) sends stereo sound to the DA40, you will only hear one channel in the headset connected to the DA40. This is not an issue with most VOIP application, like Skype, as the left and right signals sent to the USB driver are the same, and the DA40 will work perfectly.\n\nAnother issue is the balance settings may not \"stick\" if you unplug the DA40 or change the master volume level. You may need to reset the balance control in these cases.\n\nBottom line: To get best performance from the DA40, set the speaker type in the driver to \"Mono\" (if your OS supports it) and use the balance controls to select all right or all left output.\n\nThe DA40 works great if you do this.\n\nUPDATE********\n\nProblem solved with the DA40...sort of.\n\nIt appears there are two hardware versions of the DA40. The older unit is much larger, with a raised \"bump\" on one side bearing the Plantronics logo. The newer unit is flat and much thinner and lighter weight.\n\nThe problem described above occurs only with the older unit. The newer unit configures the driver correctly for mono headphone operation and works perfectly, both on Windows XP and Vista/Windows 7. The newer unit is recognized as a \"Plantronics DA40\", whereas the older unit is not.\n\nBe sure you get the newer version if you buy a DA40! Amazon and other outlets are showing the picture for the older unit. I had to really search google to find a picture of the newer hardware.",
+            "title": "Not exactly Plug and Play",
+            "userName": "Don"
+        },
+        {
+            "date": "August 26, 2009",
+            "rating": "5.0",
+            "text": "I recently purchased the DA40 USB Headset adapter so that I could use my extremely comfortable Plantronics Supra Headset (H261) to take a class online. The DA40 is \"plug and play\" so there was no software to install. It has the quick release so you can easily switch from VOIP to landline. The only thing that would make it better is if it had an inline mute button, but the price of this item more than made up for it, so I gave it 5 stars anyway. The newer DA60 has that but is three times the price. I knew before I purchased the DA40 that the mute feature was missing, but didn't think it was worth an extra $60 just for that.",
+            "title": "Great little gadget!",
+            "userName": "M. Cook"
+        },
+        {
+            "date": "September 30, 2007",
+            "rating": "5.0",
+            "text": "This is one of those products that is just well engineered. It plugs in, loads what it needs without a disk and has worked perfectly ever since. I do web sales presentatons and short webinars and then am right back on the phone and this is perfect. Worth the money!",
+            "title": "So easy to use!",
+            "userName": "E. Nesbitt"
+        },
+        {
+            "date": "November 1, 2009",
+            "rating": "5.0",
+            "text": "I have several phones set up with Plantronics headsets. I needed an easy way to use VOIP and this was easy. So easy in fact to setup I just plugged it in and it worked!!!!\nLove it!",
+            "title": "Plantronics HEADSET TO USB ADAPTER",
+            "userName": "J. Brinson"
+        },
+        {
+            "date": "November 11, 2012",
+            "rating": "5.0",
+            "text": "This works great with my Toshiba laptop with Windows 7 Home. Plug and play with any Plantronics headset. Love it it.",
+            "title": "Great adapter",
+            "userName": "eneebody"
+        },
+        {
+            "date": "December 21, 2011",
+            "rating": "5.0",
+            "text": "This adapter clips in where the old telephone cord was attached and makes your Plantonics headset compatible with any computer.",
+            "title": "Makes any Plantronics headset a usb compatable",
+            "userName": "Kemmer Matteson"
+        },
+        {
+            "date": "August 18, 2011",
+            "rating": "5.0",
+            "text": "I have an old favorite Plantronics over-the-ear headset with the tube mic. I have used it with work phones for over 15 years. It was always my standby. Then I starting working where I need to use Google Talk for phone. I tried 4 different bluetooth headsets, and the outgoing sound quality was poor on all of them. No saying it's the headset at fault, but for me with my wireless network the connection was suboptimal. My boss sent me a Plantronics over the head style, USB wired headset. The sound quality was great afterwards, but the thing hurt my head because it put too much pressure on my eyeglasses. I started looking for something else, and stumbled on this adapter, which allows me to use my old favorite headset with the quick disconnect. I am now a happy camper, no longer completely leashed to my desk. Could only be better if it were completely wireless. Considering I'd spent and wasted over $200 on non-working solutions, this is the best $35 I've spent.",
+            "title": "Works as advertised, very happy with it.",
+            "userName": "R. Jones \"R.Jones\""
+        },
+        {
+            "date": "December 12, 2010",
+            "rating": "5.0",
+            "text": "Works very well. Allows me to switch headset between connection to Cisco VOIP desk phone and to computer for conference calls.",
+            "title": "Plantronics USB Headset Adapter",
+            "userName": "S. Picker"
+        },
+        {
+            "date": "March 6, 2010",
+            "rating": "5.0",
+            "text": "And enjoy great sound quality. There is not much more to say. This works great connecting your Plantronics headset to your computer. I just returned from an overseas trip and it performed flawlessly. It is easy to wrap up the cords and it stows compactly. Recommended!",
+            "title": "Connect your Plantronics headset to your computer",
+            "userName": "John Meaders \"John\""
+        },
+        {
+            "date": "September 4, 2013",
+            "rating": "5.0",
+            "text": "Exactly what I needed.\nApparently the product looks good, hope it is.\nI will use in some hobby activities.\nI recommend this company and this product.",
+            "title": "Exactly what I needed.",
+            "userName": "Amazon Customer"
+        },
+        {
+            "date": "June 16, 2013",
+            "rating": "5.0",
+            "text": "The plantronics headsets are great. Had an old model that plugged into the phone, so this adapter was essential. I use the headset for all of my Skype calls. No loss of fidelity whatsoever.",
+            "title": "Neck saver",
+            "userName": "Babydaddy \"Rickstar\""
+        },
+        {
+            "date": "December 28, 2012",
+            "rating": "5.0",
+            "text": "excellent. These are the necessary cables and needing the headset completely fit with the port and are well protected Thank you.",
+            "title": "good",
+            "userName": "Jose Brito"
+        },
+        {
+            "date": "November 19, 2012",
+            "rating": "3.0",
+            "text": "When you go into Control Panel / Sound in Windows and configure the microphone, you'll discover that the maximum quality setting is \"1 channel, 16 bit, 16000 Hz (Tape Recorder Quality).\" If tape recorder quality is all you need, then this adapter will work fine. If you're using your headphone for podcasting or adding voiceovers to screencasts, you may find this setting somewhat limiting.",
+            "title": "Maximum sample rate is 16 kHz",
+            "userName": "M. Carr"
+        },
+        {
+            "date": "April 8, 2010",
+            "rating": "4.0",
+            "text": "No mute, otherwise it would be awesome. We use this with h91. The QuicckDisconnect telephony headsets are far more convenient for training purposes, so we use QD headsets with these adptors for our voip applications.",
+            "title": "No mute",
+            "userName": "N. Corrieri"
+        },
+        {
+            "date": "February 15, 2008",
+            "rating": "4.0",
+            "text": "Does a good job for a reasonable price. Tried several bluetooth devices and the sound quality was better and more reliable with the DA-40. During a 45 minute conference call, I did notice every 10 minutes it would \"cut out\" a bit and have some echoing but didn't last long.",
+            "title": "More reliable than Bluetooth",
+            "userName": "Biker Rose \"Biker Rose\""
+        },
+        {
+            "date": "February 25, 2014",
+            "rating": "1.0",
+            "text": "I'm hearing impaired and use Sennheiser headsets with microphones on Skype for all my telephoning. This adapter wouldn't accept the standard light green and pink male jacks on the Sennheiser.",
+            "title": "Had to return it",
+            "userName": "William W. B. Veale"
+        }
+    ]
+}
