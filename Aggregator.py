@@ -65,8 +65,11 @@ for r in Parser.reviews.list:
         
 
         print " \n ***DONE WITH CURRENT DOCUMENT. PROCESSING NEXT*** \n"
-
-average = sum(sentiment) / float(len(sentiment))
+try:
+	average = sum(sentiment) / float(len(sentiment))
+except ZeroDivisionError :
+	average = 0
+	
 print "\n\n\n###RESULT###\n\n\n"
 print "average sentiment: \n"
 print average
