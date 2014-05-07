@@ -1,7 +1,18 @@
-body {
+
+body.index {
     margin:100px 100px; padding:0px;
     text-align:center;
- 
+background-image:url('img1.jpg');
+background-color:#B8AF9E;
+background-repeat:no-repeat;
+background-size:600px 650px;
+background-attachment:fixed;
+background-position:center;
 }
 
+ body {
+    margin:100px 100px; padding:0px;
+    text-align:center;
+
+}
 
