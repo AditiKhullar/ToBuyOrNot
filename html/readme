@@ -1,0 +1,6 @@
+Steps to setup:
+
+1) Add server.py and index.html in a directory.
+2) Create a directory cgi-bin in the directory where you kept above two.
+3) Copy process_form.py and tobuyornot folder in cgi-bin. Change permissions of both to be executable(chmod 777 *)
+4) execute "python2 server.py"
