@@ -8,21 +8,17 @@ form = cgi.FieldStorage() # instantiate only once!
 asin = form.getvalue("asin", "")
 
 #os.chdir("")
-os.system("cd cgi-bin/tobuyornot/ ; python Aggregator.py > result.dat")
+os.system("cd cgi-bin/tobuyornot/ ; python Aggregator.py " + asin + "> result.dat")
 
 print "hello"
-buy = false
+buy = "DONT BUY IT"
 
 # Avoid script injection escaping the user input
-if 'GO FOR IT' in open('result.txt').read():
-    buy = true
+if 'GO FOR IT' in open('cgi-bin/tobuyornot/result.dat').read():
+    buy = 'GO FOR IT'
 
 
 print "Content-Type: text/html"
 print
-print """
-<html><body>
-<p>The submited asin was "%s"</p>
-<p>"%s"</p>
-</body></html>
-""" % asin, result
+print "<html><body><p>The submited asin was", asin,"</p>"
+print buy, "</p></body></html>"
