@@ -75,12 +75,12 @@ print "average sentiment: \n"
 print average
 
 if average > 0:
-	print "\n\n\nGO FOR IT\n\n\n"
+	print "\n\n\nVerdictGO FOR ITVerdict\n\n\n"
 elif average < 0:
-	print "\n\n\nDONT BUY IT\n\n\n"
+	print "\n\n\nVerdictDONT BUY ITVerdict\n\n\n"
 else:
 	#assuming average is exactly 0 if no reviews were found and there was a divide by zero error.
-	print "\n\n\nCANNOT PREDICT, TRY YOUR LUCK\n\n\n"
+	print "\n\n\nVerdictCANNOT PREDICT, TRY YOUR LUCKVerdict\n\n\n"
 	
 #print " \n *******DONE WITH PROCESSING ALL DOCUMENTS********** \n"
 

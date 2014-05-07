@@ -40,7 +40,8 @@ class AmazonParser:
 				print " \n\n END OF PRINT \n\n"
 				content = self.getNextPageFrom(content)
 			self.saveData()
-
+			
+		print "ProductName" + self.productName + "ProductName"
 		print "\n\n\nREVIEWS HERE\n\n\n"
 	        print self.reviews
 
