@@ -33,7 +33,7 @@ class AmazonParser:
 		else:
 			# Each iteration of the loop parses a review page 
 			self.lastPage = self.currPage = 1
-			while self.lastPage >= self.currPage:
+			while self.lastPage >= self.currPage and content != None:
 				self.getReviewsFrom(content)
 				print " \n\n PRINTING CONTENT HERE \n\n"
 				print content
@@ -110,7 +110,10 @@ class AmazonParser:
 					URLpart2 = re.search('pageNumber='+ str(self.currPage+1)+ '(.+?)>', line).group()
 					nextPage = URLpart1 + URLpart2[len("pageNumber="):-2]
 					self.currPage += 1
-					return self.getContentFrom(nextPage)
+					try:
+						return self.getContentFrom(nextPage)
+					except:
+						return None
 				break
 		self.currPage += 1
 		return None

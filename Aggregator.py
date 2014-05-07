@@ -48,7 +48,7 @@ for r in Parser.reviews.list:
 		if currentResponse['docSentiment']['type'] == "neutral":
 			# we dont get a score in this case, so ignore.
 			continue
-			
+		
         if 'score' in currentResponse['docSentiment']:
             print('score: ', currentResponse['docSentiment']['score'])
         else:
