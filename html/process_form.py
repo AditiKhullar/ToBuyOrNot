@@ -19,7 +19,8 @@ buy = "CANNOT PREDICT, TRY YOUR LUCK"
 #    buy = 'GO FOR IT'
 #elif 'DONT BUY IT' in open('cgi-bin/tobuyornot/result.dat').read():
 #	buy = 'DONT BUY IT'
-
+productName = ""
+productURL = ""
 f = open('cgi-bin/tobuyornot/result.dat')
 for line in f:
 	x = re.search('Verdict(.+?)Verdict', line)
@@ -40,5 +41,12 @@ for line in f:
 
 print "Content-Type: text/html"
 print
-print "<link rel='stylesheet' type='text/css' href='../mystyle.css'/><html><title>TO BUY OR NOT TO</title><body><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
-print "<p>", buy, "</p></body></html>"
+print "<link rel='stylesheet' type='text/css' href='../mystyle.css'/><html><title>TO BUY OR NOT TO</title>"
+
+if productName != "":
+	print "<body><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
+	print "<p>", buy, "</p>"
+else:
+	print "<body><p> Invalid Product ID: " + asin + "</p>"
+
+print '<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM></body></html>'

@@ -49,20 +49,24 @@ for r in Parser.reviews.list:
 			# we dont get a score in this case, so ignore.
 			continue
 		
-        if 'score' in currentResponse['docSentiment']:
-            print('score: ', currentResponse['docSentiment']['score'])
-        else:
-            print('Error in sentiment analysis call: ', currentResponse['statusInfo'])
+		try:
+			if 'score' in currentResponse['docSentiment']:
+				print('score: ', currentResponse['docSentiment']['score'])
+			else:
+				print('Error in sentiment analysis call: ', currentResponse['statusInfo'])
+		except Exception:
+			#hack to prevent code from breaking
+	   		break
+	   	
+	   	if float(currentResponse['docSentiment']['score']) > 0 and float(currentReviewRating) > 2.5:
+	   		print " \n\&&&&&&&&&&&&&nReview can be trusted : both positive&&&&&&&&&&&\n\n" 
+	   		sentiment.append(float(currentResponse['docSentiment']['score']))
+	   	elif float(currentResponse['docSentiment']['score']) < 0 and float(currentReviewRating) < 2.5: 
+	   		sentiment.append(float(currentResponse['docSentiment']['score']))
+	   		print " \n\n&&&&&&&&&&&&Review can be trusted : both negative&&&&&&&&&&&&&&&\n\n"
+	   	else: 
+	   		print " \n\&&&&&&&&&&&&nReview cant be trusted&&&&&&&&& \n\n" 
 
-        if float(currentResponse['docSentiment']['score']) > 0 and float(currentReviewRating) > 2.5:
-            print " \n\&&&&&&&&&&&&&nReview can be trusted : both positive&&&&&&&&&&&\n\n" 
-            sentiment.append(float(currentResponse['docSentiment']['score']))
-        elif float(currentResponse['docSentiment']['score']) < 0 and float(currentReviewRating) < 2.5: 
-            sentiment.append(float(currentResponse['docSentiment']['score']))
-            print " \n\n&&&&&&&&&&&&Review can be trusted : both negative&&&&&&&&&&&&&&&\n\n" 
-        else: 
-            print " \n\&&&&&&&&&&&&nReview cant be trusted&&&&&&&&& \n\n" 
-        
 
         print " \n ***DONE WITH CURRENT DOCUMENT. PROCESSING NEXT*** \n"
 try:
