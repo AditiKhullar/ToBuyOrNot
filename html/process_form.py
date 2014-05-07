@@ -40,5 +40,5 @@ for line in f:
 
 print "Content-Type: text/html"
 print
-print "<html><title>TO BUY OR NOT TO</title><body><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
+print "<link rel='stylesheet' type='text/css' href='../mystyle.css'/><html><title>TO BUY OR NOT TO</title><body><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
 print "<p>", buy, "</p></body></html>"
