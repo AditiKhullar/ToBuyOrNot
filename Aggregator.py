@@ -55,7 +55,6 @@ for r in Parser.reviews.list:
 			else:
 				print('Error in sentiment analysis call: ', currentResponse['statusInfo'])
 		except Exception:
-			#hack to prevent code from breaking
 	   		break
 	   	
 	   	if float(currentResponse['docSentiment']['score']) > 0 and float(currentReviewRating) > 2.5:
