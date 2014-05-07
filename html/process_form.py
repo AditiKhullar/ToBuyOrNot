@@ -14,15 +14,13 @@ print "hello"
 buy = "CANNOT PREDICT, TRY YOUR LUCK"
 
 # Avoid script injection escaping the user input
-f = open('cgi-bin/tobuyornot/result.dat')
-if 'GO FOR IT' in f.read():
+#f = open('cgi-bin/tobuyornot/result.dat')
+if 'GO FOR IT' in open('cgi-bin/tobuyornot/result.dat').read():
     buy = 'GO FOR IT'
-elif 'DONT BUY IT' in f.read():
+elif 'DONT BUY IT' in open('cgi-bin/tobuyornot/result.dat').read():
 	buy = 'DONT BUY IT'
-
-
 
 print "Content-Type: text/html"
 print
-print "<html><body><p>The submited asin was", asin,"</p>"
+print "<html><body><p>The submitted asin was", asin,"</p>"
 print buy, "</p></body></html>"
