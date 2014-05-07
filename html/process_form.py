@@ -34,5 +34,5 @@ for line in f:
 
 print "Content-Type: text/html"
 print
-print "<html><body><p>Product ID is", asin,"</p> <p>Product name is", productName, "</p>"
+print "<html><title>TO BUY OR NOT TO</title><body><p>Product ID is", asin,"</p> <p>Product name is", productName, "</p>"
 print "<p>", buy, "</p></body></html>"
