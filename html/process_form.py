@@ -32,7 +32,13 @@ for line in f:
 	if x:
 		productName = x.group(1)
 
+f = open('cgi-bin/tobuyornot/result.dat')
+for line in f:
+	x = re.search('ProductURL(.+?)ProductURL', line)
+	if x:
+		productURL = x.group(1)
+
 print "Content-Type: text/html"
 print
-print "<html><title>TO BUY OR NOT TO</title><body><p>Product ID is", asin,"</p> <p>Product name is", productName, "</p>"
+print "<html><title>TO BUY OR NOT TO</title><body><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
 print "<p>", buy, "</p></body></html>"

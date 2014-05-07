@@ -41,6 +41,7 @@ class AmazonParser:
 				content = self.getNextPageFrom(content)
 			self.saveData()
 			
+		print "ProductURL" + product_URL + "ProductURL"
 		print "ProductName" + self.productName + "ProductName"
 		print "\n\n\nREVIEWS HERE\n\n\n"
 	        print self.reviews
