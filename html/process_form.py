@@ -11,11 +11,15 @@ asin = form.getvalue("asin", "")
 os.system("cd cgi-bin/tobuyornot/ ; python Aggregator.py " + asin + "> result.dat")
 
 print "hello"
-buy = "DONT BUY IT"
+buy = "CANNOT PREDICT, TRY YOUR LUCK"
 
 # Avoid script injection escaping the user input
-if 'GO FOR IT' in open('cgi-bin/tobuyornot/result.dat').read():
+f = open('cgi-bin/tobuyornot/result.dat')
+if 'GO FOR IT' in f.read():
     buy = 'GO FOR IT'
+elif 'DONT BUY IT' in f.read():
+	buy = 'DONT BUY IT'
+
 
 
 print "Content-Type: text/html"
