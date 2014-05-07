@@ -5,8 +5,8 @@ from Responses import *
 from AlchemyAPI.alchemyapi import AlchemyAPI
 
 # URL of product's main/ review page
-#URL = "http://www.amazon.com/dp/B000Y9YJK4/"
-URL = "http://www.amazon.com/dp/B000BVZ3BO/"
+#URL = "http://www.amazon.com/dp/B004ZAQ41A/"
+URL = "http://www.amazon.com/dp/" + sys.argv[1] + "/"
 
 
 Parser = AmazonParser(URL)
@@ -45,6 +45,10 @@ for r in Parser.reviews.list:
 
 		print('type: ', currentResponse['docSentiment']['type'])
 	
+		if currentResponse['docSentiment']['type'] == "neutral":
+			# we dont get a score in this case, so ignore.
+			continue
+			
         if 'score' in currentResponse['docSentiment']:
             print('score: ', currentResponse['docSentiment']['score'])
         else:

@@ -150,20 +150,24 @@ class AmazonParser:
 	def saveData(self):
 		""" Saves the reviews into a JSON file """
 		if self.ASIN != None:
-			dirName = "Reviews/" + self.ASIN + ' - ' + self.productName
-			if not os.path.isdir(dirName): os.mkdir(dirName)
+			#dirName = "Reviews/" + self.ASIN + ' - ' + self.productName
+			dirName = "Reviews/" + self.ASIN
+			if not os.path.isdir(dirName): 
+				os.mkdir(dirName)
 			filename = dirName + '/Reviews.json'
 			self.reviews.saveData(filename)
 
 	def reviewsOnDisk(self):
 		""" Checks if product reviews have be retrieved """
-		return os.path.isfile('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Reviews.json')
+		#return os.path.isfile('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Reviews.json')
+		return os.path.isfile('Reviews/' + self.ASIN  +'/Reviews.json')
 
 	def readReviewsOnDisk(self):
 		""" Reads reviews stored in a JSON file into the reviews data structure.
 			Reviews must exist on disk.
 			"""
-		json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Reviews.json')
+		#json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Reviews.json')
+		json_data=open('Reviews/' + self.ASIN  +'/Reviews.json')
 		data = json.load(json_data)
 		review_List_JSON = data['Reviews']
 		for review_JSON in review_List_JSON:
@@ -181,7 +185,8 @@ class AmazonParser:
 			# printResponsesFromDisk()
 			responses = self.readResponsesOnDisk()
 			# print responses
-			dirName = "Reviews/" + self.ASIN  + ' - ' + self.productName
+			#dirName = "Reviews/" + self.ASIN  + ' - ' + self.productName
+			dirName = "Reviews/" + self.ASIN  
 			if not os.path.isdir(dirName): os.mkdir(dirName)
 			filename = dirName + '/Responses.json'
 			responses.list.sort(reverse=True)
@@ -201,7 +206,8 @@ class AmazonParser:
 						if 'score' in keyword['sentiment']:
 							score = keyword['sentiment']['score']
 						responses.add(Response(1, text, relevance, sentiment, score))
-			dirName = "Reviews/" + self.ASIN  + ' - ' + self.productName
+			#dirName = "Reviews/" + self.ASIN  + ' - ' + self.productName
+			dirName = "Reviews/" + self.ASIN
 			if not os.path.isdir(dirName): os.mkdir(dirName)
 			filename = dirName + '/Responses.json'
 			responses.saveData(filename)
@@ -210,14 +216,16 @@ class AmazonParser:
 
 	def ResponsesOnDisk(self):
 		""" Checks if product responses have be retrieved """
-		return os.path.isfile('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		#return os.path.isfile('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		return os.path.isfile('Reviews/' + self.ASIN  +'/Responses.json')
 
 	def readResponsesOnDisk(self):
 		""" Reads responses stored in a JSON file into the responses data structure.
 			Responses must exist on disk.
 			"""
 		responses = Responses(self.productName)
-		json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		#json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		json_data=open('Reviews/' + self.ASIN  + '/Responses.json')
 		data = json.load(json_data)
 		response_List_JSON = data['Responses']
 		for response_JSON in response_List_JSON:
@@ -232,7 +240,8 @@ class AmazonParser:
 		""" Prints the responses stored in the JSON file
 			Responses must exist on disk.
 			"""
-		json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		#json_data=open('Reviews/' + self.ASIN  + ' - ' + self.productName + '/Responses.json')
+		json_data=open('Reviews/' + self.ASIN  + '/Responses.json')
 		data = json.load(json_data)
 		print str(data['Count']) + " reviews found.\n"
 		response_List_JSON = data['Responses']
