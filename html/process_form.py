@@ -45,18 +45,18 @@ print "<link rel='stylesheet' type='text/css' href='../mystyle.css'/><html><titl
 
 if productName != "":
         if buy=="GO FOR IT":
-                print "<body class='go'><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
-                print "<p>", buy, "</p>"
-        elif buy=="DONT BUT IT":
-                print "<body class='dont'><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
-                print "<p>", buy, "</p>"
-        elif buy=="CANNOT PREDICT,TRY YOUR LUCK":
-                print "<body class='luck'><p>Product ID is " + asin + "</p> <p>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></p>"
-                print "<p>", buy, "</p>"
+                print "<body class='go'><h1>Product ID is " + asin + "</h1> <h3>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></h3>"
+                print "<h1>", buy, "</h1>"
+        elif buy=="DONT BUY IT":
+                print "<body class='dont'><h1>Product ID is " + asin + "</h1> <h3>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></h3>"
+                print "<h1>", buy, "</h1>"
+        elif buy=="CANNOT PREDICT, TRY YOUR LUCK":
+                print "<body class='luck'><h1>Product ID is " + asin + "</h1> <h3>Product Name is <a target='_blank' href=" + productURL + ">" + productName + "</a></h3>"
+                print "<h1>", buy, "</h1>"
 
 
 
 else:
-        print "<body><p> Invalid Product ID: " + asin + "</p>"
+        print "<body><h1> Invalid Product ID: " + asin + "</h1>"
 
 print '<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM></body></html>'
