@@ -1,18 +1,50 @@
 
+                                                              46,0-1        85%
 body.index {
     margin:100px 100px; padding:0px;
     text-align:center;
 background-image:url('img1.jpg');
 background-color:#B8AF9E;
 background-repeat:no-repeat;
-background-size:600px 650px;
+background-size:65% 110%;
 background-attachment:fixed;
 background-position:center;
 }
 
- body {
+body.luck {
     margin:100px 100px; padding:0px;
     text-align:center;
+background-image:url('luck.jpg');
+background-color:#B8AF9E;
+background-repeat:no-repeat;
+background-size:65% 110%;
+background-attachment:fixed;
+background-position:center;
 
 }
 
+body.dont{
+ margin:100px 100px; padding:0px;
+    text-align:center;
+background-image:url('dont.jpg');
+background-color:#B8AF9E;
+background-repeat:no-repeat;
+background-size:65% 110%;
+background-attachment:fixed;
+background-position:center;
+}
+
+body.go{
+ margin:100px 100px; padding:0px;
+    text-align:center;
+background-image:url('go.jpg');
+background-color:#B8AF9E;
+background-repeat:no-repeat;
+background-size:65% 110%;
+background-attachment:fixed;
+background-position:center;
+}
+
+h1{
+color:#3B170B;
+}
